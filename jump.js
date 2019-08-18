@@ -2,7 +2,7 @@
 // @name         Luogu Problem Jumper
 // @version      1.2.0
 // @description  双击题号，自动跳转
-// @author       Anguei
+// @author       Anguei, ouuan
 // @match        https://www.luogu.org/*
 // @match        https://*.blog.luogu.org/*
 // @require      https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
