@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Luogu Problem Jumper
-// @version      1.1
+// @version      1.1.1
 // @description  双击题号，自动跳转
 // @author       Anguei
 // @match        https://www.luogu.org/*
