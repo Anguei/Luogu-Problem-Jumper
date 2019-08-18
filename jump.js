@@ -15,7 +15,7 @@ $(document).ready(function() {
         var selection = window.getSelection();
         var selected = selection.toString();
         selected = selected.replace(' ', '').toUpperCase();
-        console.log(selected);
+        
         if (isProblemId(selected)) {
             window.open('https://www.luogu.org/problem/' + selected);
             selection.removeAllRanges();
