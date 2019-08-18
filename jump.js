@@ -12,7 +12,7 @@
 function jump() {
     var selection = window.getSelection();
     var selected = selection.toString();
-    seleced = selected.replace(' ', '').toUpperCase();
+    selected = selected.replace(' ', '').toUpperCase();
     // console.log(selected);
     if (isProblemId(selected)) {
         window.open('https://www.luogu.org/problem/' + selected);
