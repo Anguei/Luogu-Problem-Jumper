@@ -6,12 +6,13 @@
 // @match        https://www.luogu.org/*
 // @match        https://*.blog.luogu.org/*
 // @grant        none
+// @namespace    Anguei
 // ==/UserScript==
 
 function jump() {
   var selection = window.getSelection();
   var selected = selection.toString();
-  selected = selected.replace(' ', '');
+  seleced = selected.replace(' ', '')
   // console.log(selected);
   if (isProblemId(selected)) {
       window.open('https://www.luogu.org/problem/' + selected);
