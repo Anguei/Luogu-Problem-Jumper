@@ -32,7 +32,7 @@ function jump() {
 }
 
 if (window.screen.width / window.screen.height < 0.6) {
-  document.onselectionchange = jump;
+  document.addEventListener('selectionchange', jump);
 } else {
   document.ondblclick = jump;
 }
