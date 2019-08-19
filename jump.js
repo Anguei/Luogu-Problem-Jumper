@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Luogu Problem Jumper
-// @version      1.4.1
+// @version      1.5
 // @description  双击题号，自动跳转
 // @author       Anguei, ouuan, abc1763613206
 // @match        https://www.luogu.org/*
@@ -43,15 +43,12 @@ function jumpMobile() {
   var url = window.location.href;
 
   if (isProblemId(selected)) {
-    if (url.match(/message/) == undefined) {
-      window.open('https://www.luogu.org/problem/' + selected);
+    var parent = selection.anchorNode.parentNode;
+    if (parent.className == 'am-comment-bd' &&
+      parent.parentNode.innerHTML.match(/href="\/space\/show\?uid=3"/) != undefined) {
+      window.open('https://' + url.match(/uid=([0-9]+)/)[1] + '.blog.luogu.org/solution-' + selected);
     } else {
-      window.open(
-          selection.anchorNode.data.match(/评论了您的博客/) !=
-                  undefined ?
-              'https://' + url.match(/uid=([0-9]+)/)[1] +
-                  '.blog.luogu.org/solution-' + selected :
-              'https://www.luogu.org/problem/' + selected);
+      window.open('https://www.luogu.org/problem/' + selected);
     }
   }
 }
