@@ -15,7 +15,12 @@ function jump() {
   selected = selected.replace(' ', '').toUpperCase();
 
   if (isProblemId(selected)) {
-    window.open('https://www.luogu.org/problem/' + selected);
+    var url = window.location.href;
+    window.open(
+        url.match(/message/) != undefined ?
+            'https://' + url.match(/uid=([0-9]+)/)[1] +
+                '.blog.luogu.org/solution-' + selected :
+            'https://www.luogu.org/problem/' + selected);
     selection.removeAllRanges();
   }
 
