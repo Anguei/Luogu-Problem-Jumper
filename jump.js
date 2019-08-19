@@ -15,10 +15,10 @@ function jump() {
   var url;
 
   if(event.ctrlKey) {
-  	var myBlog = document.querySelectorAll('.ops>a[href*=blog]')[0];
+    var myBlog = document.querySelectorAll('.ops>a[href*=blog]')[0];
     url = myBlog.href + 'solution-';
   } else {
-  	url = 'https://www.luogu.org/problem/';
+    url = 'https://www.luogu.org/problem/';
   }
 
   if (isProblemId(selected)) {
