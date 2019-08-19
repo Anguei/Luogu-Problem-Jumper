@@ -31,7 +31,12 @@ function jump() {
   }
 }
 
-if (window.screen.width / window.screen.height < 0.6) {
+function checkUA() {
+    var ua = navigator.userAgent;
+    return ua.indexOf('Android') > -1 ;
+}
+    
+if ((window.screen.width / window.screen.height < 0.6) || checkUA) {
   document.addEventListener('selectionchange', jump);
 } else {
   document.ondblclick = jump;
