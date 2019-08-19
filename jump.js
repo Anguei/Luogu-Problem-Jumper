@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Luogu Problem Jumper
-// @version      1.2.2
+// @version      1.2.3
 // @description  双击题号，自动跳转
 // @author       Anguei, ouuan
 // @match        https://www.luogu.org/*
@@ -31,4 +31,8 @@ function jump() {
   }
 }
 
-document.ondblclick = jump;
+if (window.screen.width / window.screen.height < 0.6) {
+  document.onselectionchange = jump;
+} else {
+  document.ondblclick = jump;
+}
