@@ -3,8 +3,8 @@
 // @version      1.5
 // @description  双击题号，自动跳转
 // @author       Anguei, ouuan, abc1763613206
-// @match        https://www.luogu.org/*
-// @match        https://*.blog.luogu.org/*
+// @match        https://www.luogu.com.cn/*
+// @match        https://*.blog.luogu.com.cn/*
 // @grant        none
 // @namespace    Anguei
 // ==/UserScript==
@@ -29,7 +29,7 @@ function jump() {
     var myBlog = document.querySelectorAll('.ops>a[href*=blog]')[0];
     url = myBlog.href + 'solution-';
   } else {
-    url = 'https://www.luogu.org/problem/';
+    url = 'https://www.luogu.com.cn/problem/';
   }
 
   if (isProblemId(selected)) {
@@ -46,9 +46,9 @@ function jumpMobile() {
     var parent = selection.anchorNode.parentNode;
     if (parent.className == 'am-comment-bd' &&
       parent.parentNode.innerHTML.match(/href="\/space\/show\?uid=3"/) != undefined) {
-      window.open('https://' + url.match(/uid=([0-9]+)/)[1] + '.blog.luogu.org/solution-' + selected);
+      window.open('https://' + url.match(/uid=([0-9]+)/)[1] + '.blog.luogu.com.cn/solution-' + selected);
     } else {
-      window.open('https://www.luogu.org/problem/' + selected);
+      window.open('https://www.luogu.com.cn/problem/' + selected);
     }
   }
 }
