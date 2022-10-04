@@ -46,7 +46,7 @@ function jumpMobile() {
   if (isProblemId(selected)) {
     var parent = selection.anchorNode.parentNode;
     if (parent.className == 'am-comment-bd' &&
-      parent.parentNode.innerHTML.match(/href="\/space\/show\?uid=3"/) != undefined) {
+      parent.parentNode.innerHTML.match(/href="\/user\/3") != undefined) {
       window.open('https://' + url.match(/uid=([0-9]+)/)[1] + '.blog.luogu.com.cn/solution-' + selected);
     } else {
       window.open('https://www.luogu.com.cn/problem/' + selected);
